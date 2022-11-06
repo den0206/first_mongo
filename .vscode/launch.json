@@ -1,0 +1,41 @@
+{
+  // IntelliSense を使用して利用可能な属性を学べます。
+  // 既存の属性の説明をホバーして表示します。
+  // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'start_rust'",
+      "cargo": {
+        "args": ["build", "--bin=start_rust", "--package=start_rust"],
+        "filter": {
+          "name": "start_rust",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'start_rust'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=start_rust",
+          "--package=start_rust"
+        ],
+        "filter": {
+          "name": "start_rust",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
